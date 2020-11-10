@@ -1,0 +1,66 @@
+Data Area - Nav bar(searchBox) located within here/DataTable
+Data Body - Displays Employees and search results
+Data Table - has the table headers that display: image, Name, Phone, Email, DOB
+Main emcompasses Data area and search box
+Nav has search bar within	
+
+// class SearchBox extends Component {
+//   state = {
+//     results: [],
+//     search: "",
+//   };
+
+//   componentDidMount() {
+//     this.searchEmployees("John Smith");
+//   };
+
+//   searchEmployees = query => {
+//     API.search(query)
+//       .then(res => this.setState({ results: res.data }))
+//       .catch(err => console.log(err));
+//   };
+
+//   handleInputChange = event => {
+//     const name = event.target.name;
+//     const value = event.target.value;
+//     this.setState({
+//       [name]: value
+//     });
+//   };
+
+//   handleFormSubmit = event => {
+//     event.preventDefault();
+//     this.searchEmployees(this.state.search);
+//   };
+
+//   render() {
+//     return (
+
+//             <Wrapper>
+//               <Header Employee Directory />
+//               <Main />
+//               <searchBox
+//                 value={this.state.search}
+//                 handleInputChange={this.handleInputChange}
+//                 handleFormSubmit={this.handleFormSubmit}
+//               />
+//               <table>
+//                 {/* if statement (ternary operator) */}
+//                 {this.state.results.Name ? (
+//                   <dataTable
+//                     image={this.state.results.Image}
+//                     name={this.state.results.Name}
+//                     phone={this.state.results.Phone}
+//                     email={this.state.results.Email}
+//                     dob={this.state.results.dob}
+//                   />
+//                 ) : (
+//                     <h3>No Results to Display</h3>
+//                   )}
+//               </table>
+//               <dataBody results={this.state.results} />
+//             </Wrapper>
+
+//     );
+//   }
+// }
